@@ -81,11 +81,39 @@ a{
 	font-weight: bold;
     font-size: .9em;
 }
+.card-grid{
+	display: grid;
+	grid-auto-flow: column;
+}
+.card-buttons{
+	grid-row: 1;
+	padding-left: 5vw;
+}
+.card-toggle{
+	grid-row: 2;
+	grid-column: 1;
+	margin-top: 5vh;
+}
+.card-aside{
+	display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-between;
+    height: 180px;
+}
 .card-img{
 	border-radius: 50%;
 	max-width: 150px;
+	display: block;
+    margin: 0 auto;
 }
-.github li{
+.card-link{
+	text-align: center
+}
+.card-github{
+	padding: 0;
+}
+.card-github li{
 	list-style-type: none; 
 }
 .button{
@@ -95,6 +123,12 @@ a{
 	padding: .5em 1em;
 	border-radius: 3px;
 	outline: none;
+	cursor: pointer;
+}
+.button:hover,
+.button:focus{
+	background: #89da30;
+	color: #fff;
 }
 .table{
 	width: 100%;
@@ -110,4 +144,16 @@ a{
 	background: #303030;
 	padding: 1em 5vw;
 	text-align: center;
+}
+
+@media screen and (max-width:700px){
+	.card-aside{
+		grid-row: 1;
+	}
+	.card-buttons{
+		grid-row: 2;
+	}
+	.card-toggle{
+		grid-row: 3;
+	}
 }

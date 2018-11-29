@@ -27,7 +27,7 @@ gulp.task('scss', () => {
 });
 
 gulp.task('browser-sync', function() {  
-    browserSync.init(["src/*.scss", "./*.js", "src/*.js", "./*.html"], {
+    browserSync.init(["dist/*.css", "./*.js", "dist/*.js", "./*.html"], {
         server: {
             baseDir: "./"
         }

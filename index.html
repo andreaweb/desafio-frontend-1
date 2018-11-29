@@ -7,15 +7,15 @@
     <link href="dist/styles.css" rel="stylesheet">
   </head>
   <body>
-	<section class="jumbotron">
+	<section class="jumbotron" id="home">
 		<div class="jumbotron-content">
 		  	<header class="jumbotron-header">
 		  		<h2 class="logo">Andrea Santana</h2>
 		  		<nav class="menu-wrapper">
 		  			<ul class="menu">
-		  				<li class="menu__item"><a href="#">Home</a></li>
-		  				<li class="menu__item"><a href="#">Sobre</a></li>
-		  				<li class="menu__item"><a href="#">Desafio</a></li>
+		  				<li class="menu__item"><a href="#home">Home</a></li>
+		  				<li class="menu__item"><a href="#about">Sobre</a></li>
+		  				<li class="menu__item"><a href="#challenge">Desafio</a></li>
 		  			</ul>
 		  		</nav>
 		  	</header>
@@ -30,7 +30,7 @@
 		  	</footer>
 		</div>
 	</section>
-	<section class="about">
+	<section class="about" id="about">
 		<h3 class="title">Sobre</h3>
 	  	<p>And lo, led by the valiant hero Angus McFife XIII
 		The forces of justice assembled their armies in the skies above Mars
@@ -142,14 +142,10 @@
 		</p>Sanctus!
 		Dominus!</p>
 	</section>
-	<section class="challenge">
+	<section class="challenge" id="challenge">
 		<h3 class="title">Desafio</h3>
 	  	<div class="card">
-	  		<aside>
-	  			<img class="card-img" src="https://avatars1.githubusercontent.com/u/13103893?s=460&v=4" />
-	  			<a href="#">VISITAR PERFIL</a>
-	  		</aside>
-	  		<section id="js-content">
+	  		<section id="js-content" class="card-grid">
 	  		</section>
 	  		<!-- template here -->
 	  	</div>
