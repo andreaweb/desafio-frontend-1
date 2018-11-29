@@ -60,4 +60,54 @@ a{
 }
 .about{
 	margin-top: 10vh;
+	padding: 0 5vw;
+}
+.title{
+	text-align: center;
+	font-size: 2em;
+	margin: 7vh 0;
+}
+.challenge{
+	background-color: #e8f5eb;
+	padding: 10vh 5vw;
+}
+.card{
+	background-color: #fff;
+	color: #223b25;
+	text-transform: small-caps;
+	padding: 3em;
+	width: 70vw;
+	margin: 0 auto;
+	font-weight: bold;
+    font-size: .9em;
+}
+.card-img{
+	border-radius: 50%;
+	max-width: 150px;
+}
+.github li{
+	list-style-type: none; 
+}
+.button{
+	background: transparent;
+	border: 1px solid #89da30;
+	color: #89da30;
+	padding: .5em 1em;
+	border-radius: 3px;
+	outline: none;
+}
+.table{
+	width: 100%;
+}
+.striped tr:nth-child(odd){
+	background: #fff;
+}
+.striped tr:nth-child(even){
+	background: #e8f5eb;
+}
+.footer{
+	color: #fff;
+	background: #303030;
+	padding: 1em 5vw;
+	text-align: center;
 }

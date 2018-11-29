@@ -28,14 +28,26 @@
 // 	user = data;
 // }
 
-// <ul>
-// 	<li>Repositórios: </li>
-// 	<li>Seguidores: </li>
-// 	<li>Seguindo: </li>
-// </ul>
-// <button>Ver Repositórios</button>
-// <button>Ver Favoritos</button>
-// <h5>LISTA DOS REPOSITÓRIOS</h5>
-// <table>
-// 	<tr><td>repo.name or favo.name</td></tr>
-// </table>
+const some_html = `
+<ul class="github">
+	<li>REPOSITÓRIOS: </li>
+	<li>SEGUIDORES: </li>
+	<li>SEGUINDO: </li>
+</ul>
+<div>
+	<button class="button" id="#get-repos">VER REPOSITÓRIOS</button>
+	<button class="button" id="#get-stars">VER FAVORITOS</button>
+</div>
+<section class="toggle">
+	<h5>LISTA DOS REPOSITÓRIOS</h5>
+	<table class="table striped">
+		<tr><td>repo.name or favo.name</td></tr>
+		<tr><td>repo.name or favo.name</td></tr>
+		<tr><td>repo.name or favo.name</td></tr>
+		<tr><td>repo.name or favo.name</td></tr>
+	</table>
+</section>
+`;
+
+let elem = document.querySelector('#js-content');
+elem.innerHTML = some_html;
