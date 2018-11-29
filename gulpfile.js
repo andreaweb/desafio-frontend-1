@@ -1,9 +1,11 @@
 const gulp = require('gulp');
+const browserSync = require('browser-sync');
+const cleanCSS = require('gulp-clean-css');
+const sass = require('gulp-sass');
 const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
 const webpackConfig = require('./webpack.config.js');
-const browserSync = require('browser-sync');
-const cleanCSS = require('gulp-clean-css');
+sass.compiler = require('node-sass');
 
 gulp.task('js', () => {
   gulp.src('./src/*.js')
@@ -11,14 +13,21 @@ gulp.task('js', () => {
     .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('css', () => {
-  gulp.src('./src/*.css')
+// gulp.task('css', () => {
+//   gulp.src('./src/*.css')
+//     .pipe(cleanCSS({compatibility: 'ie8'}))
+//     .pipe(gulp.dest('dist'));
+// });
+
+gulp.task('scss', () => {
+  gulp.src('./src/*.scss')
+    .pipe(sass().on('error', sass.logError))
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('dist'));
 });
 
 gulp.task('browser-sync', function() {  
-    browserSync.init(["src/*.css", "./*.js", "src/*.js", "./*.html"], {
+    browserSync.init(["src/*.scss", "./*.js", "src/*.js", "./*.html"], {
         server: {
             baseDir: "./"
         }
@@ -33,5 +42,7 @@ gulp.task('watch',  ['browser-sync'], function() {
 
     gulp.watch('./src/*.js', ['js']);
 
-    gulp.watch('./src/*.css', ['css']);
+    gulp.watch('./src/*.scss', ['scss']);
+
+    // gulp.watch('./src/*.css', ['css']);
 });
