@@ -10,7 +10,7 @@ sass.compiler = require('node-sass');
 gulp.task('js', () => {
   gulp.src('./src/*.js')
     .pipe(webpackStream(webpackConfig), webpack)
-    .pipe(gulp.dest('./dist'));
+    .pipe(gulp.dest('dist'));
 });
 
 // gulp.task('css', () => {
