@@ -1,4 +1,4 @@
-# Frontend Chalenge - Qconcursos
+﻿# Frontend Chalenge - Qconcursos
 
 Conforme combinado, segue pull request da minha versão do desafio.
 
@@ -8,4 +8,4 @@ CSS Flex, CSS Grid e media queries foram utilizados para tornar o design respons
 
 Utilizei também gulp e browsersync. Não tenho muita experiência com webpack, mas estou o usando parcialmente para minimizar o JS e apontar erros.
 
-![Alt text](myversion.jpg?raw=true "Landing Page")
+![Alt text](myversion.png?raw=true "Landing Page")
